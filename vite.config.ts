@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+
 export default defineConfig({
+  base: "/cra-portfolio/",
   plugins: [
     react({
       babel: {
@@ -12,5 +14,5 @@ export default defineConfig({
     alias: {
       "@": "/src",
     },
-  }
+  },
 });
