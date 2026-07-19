@@ -1,18 +1,20 @@
 // import React from 'react';
 
+// import styled from "styled-components";
+import {Icon} from "../icon/Icon.tsx";
 import styled from "styled-components";
-// import {Icon} from "../icon/Icon.tsx";
+// import styled from "styled-components";
 
 export const Logo = () => {
     return (
-        <a href="">
-            {/*<Icon iconId ={'code'}/>*/}
-            <LogoImage src="/favicon.svg" width={40} height={40} alt="logo"/>
-        </a>
+        <LogoLink href="/" aria-label="Home page">
+            <Icon iconId={'logo'} />
+        </LogoLink>
     );
 };
-const LogoImage = styled.img`
-    border-radius: 50%;
-    padding-top: 5px;
+const LogoLink = styled.a`
+display: flex;
+    align-items: center;
+    height: 100%;
+    //border: 2px solid green;
 `
-
