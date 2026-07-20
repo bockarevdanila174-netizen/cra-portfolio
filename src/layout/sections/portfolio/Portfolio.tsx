@@ -4,7 +4,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {PortfolioCard} from "./portfolioCard/PortfolioCard.tsx";
 import fashionImg from "../../../assets/images/fashion.png"
 import reebokImg from "../../../assets/images/reebok.png"
-import braunImg from "../../../assets/images/braun.svg"
+import braunImg from "../../../assets/images/braun.png"
 import {Container} from "../../../components/Container.ts";
 import {S} from "./Portfolio_Styles.tsx"
 
