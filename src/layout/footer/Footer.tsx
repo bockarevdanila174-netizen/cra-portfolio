@@ -4,6 +4,23 @@ import { Container } from "../../components/Container.ts";
 import { FlexWrapper } from "../../components/FlexWrapper.tsx";
 import {S} from "./Footer_Styles.tsx"
 
+const footerItemData = [
+    { title: "Home", href: "#home" },
+    { title: "About", href: "#about" },
+    { title: "Skills", href: "#skills" },
+    { title: "Portfolio", href: "#portfolio" },
+    { title: "Contacts", href: "#contacts" },
+];
+
+const footerListData = [
+    { title:"Frontend Developer"},
+    { title:"React • TypeScript"},
+    { title:"Vite • Styled Components"},
+    { title:"Responsive Web Design"},
+    { title:"Open to Work"},
+
+]
+
 export const Footer:React.FC = () => {
     return (
         <S.StyledFooter>
@@ -18,52 +35,24 @@ export const Footer:React.FC = () => {
                     <S.FooterColumn>
                         <S.FooterTitle>EXPLORE</S.FooterTitle>
 
-                        <S.FooterList>
-                            <S.FooterItem>
-                                <S.FooterLink href="#home">Home</S.FooterLink>
+                        {footerItemData.map((i, index) => (
+                            <S.FooterItem key={index}>
+                                <S.FooterLink href={i.href}>{i.title}</S.FooterLink>
                             </S.FooterItem>
-                            <S.FooterItem>
-                                <S.FooterLink href="#about">About</S.FooterLink>
-                            </S.FooterItem>
+                        ))}
 
-                            <S.FooterItem>
-                                <S.FooterLink href="#skills">Skills</S.FooterLink>
-                            </S.FooterItem>
-
-                            <S.FooterItem>
-                                <S.FooterLink href="#portfolio">Portfolio</S.FooterLink>
-                            </S.FooterItem>
-
-                            <S.FooterItem>
-                                <S.FooterLink href="#contacts">Contacts</S.FooterLink>
-                            </S.FooterItem>
-                        </S.FooterList>
                     </S.FooterColumn>
 
                     <S.FooterColumn>
                         <S.FooterTitle>ABOUT</S.FooterTitle>
 
-                        <S.FooterList>
-                            <S.FooterItem>
-                                <S.FooterText>Frontend Developer</S.FooterText>
-                            </S.FooterItem>
+                        {footerListData.map((l,index) => (
 
-                            <S.FooterItem>
-                                <S.FooterText>React • TypeScript</S.FooterText>
-                            </S.FooterItem>
 
-                            <S.FooterItem>
-                                <S.FooterText>Vite • Styled Components</S.FooterText>
+                            <S.FooterItem key={index}>
+                            <S.FooterText>{l.title}</S.FooterText>
                             </S.FooterItem>
-
-                            <S.FooterItem>
-                                <S.FooterText>Responsive Web Design</S.FooterText>
-                            </S.FooterItem>
-S.
-                            <S.FooterItem>
-                                <S.FooterText>Open to Work</S.FooterText>
-                            </S.FooterItem>
-                        </S.FooterList>
+                        ))}
                     </S.FooterColumn>
                 </FlexWrapper>
 

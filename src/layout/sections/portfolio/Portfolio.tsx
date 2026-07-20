@@ -8,7 +8,11 @@ import braunImg from "../../../assets/images/braun.svg"
 import {Container} from "../../../components/Container.ts";
 import {S} from "./Portfolio_Styles.tsx"
 
-
+const portfolioData = [
+    { title: "Fashion Store", description: "E-commerce landing page built with React and TypeScript.", image: fashionImg },
+    { title: "Reebok Store", description: "Responsive online store concept with modern UI." ,image: reebokImg },
+    { title: "Braun Landing Page", description: "Clean product landing page with adaptive layout.", image: braunImg },
+]
 
 export const Portfolio: React.FC = () => {
     return (
@@ -26,26 +30,17 @@ export const Portfolio: React.FC = () => {
                     wrap="wrap"
                     gap="40px"
                 >
-                    <PortfolioCard
-                        title="Fashion Store"
-                        description="E-commerce landing page built with React and TypeScript."
-                        image={fashionImg}
+                    {portfolioData.map((p, index) => {
+                        return  <PortfolioCard
+                            title={p.title}
+                            key={index}
+                            description={p.description}
+                            image={p.image}
 
-                    />
+                        />
+                    })}
 
-                    <PortfolioCard
-                        title="Reebok Store"
-                        description="Responsive online store concept with modern UI."
-                        image={reebokImg}
 
-                    />
-
-                    <PortfolioCard
-                        title="Braun Landing Page"
-                        description="Clean product landing page with adaptive layout."
-                        image={braunImg}
-
-                    />
                 </FlexWrapper>
 
             </Container>

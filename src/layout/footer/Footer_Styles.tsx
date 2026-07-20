@@ -34,7 +34,8 @@ const FooterList = styled.ul`
     gap: 18px;
 `
 
-const FooterItem = styled.li``;
+const FooterItem = styled.li`
+list-style: none`;
 
 const FooterLink = styled.a`
     text-decoration: none;

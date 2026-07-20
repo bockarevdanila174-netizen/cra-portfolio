@@ -30,8 +30,8 @@ export const Skills:React.FC = () => {
                     gap={"30px"}
 
                 >
-                    {skillData.map((s)=>{
-                        return <Skill  iconId={s.iconId} title={s.title} />
+                    {skillData.map((s, index)=>{
+                        return <Skill  iconId={s.iconId} key={index} title={s.title} />
 
 
                     })}
